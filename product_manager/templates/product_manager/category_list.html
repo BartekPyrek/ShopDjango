@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<h2>Kategorie</h2>
+	<div class="collection">
+	{% for object in object_list %}
+		<a href="{{object.get_absolute_url}}" class="collection-item">{{object}}
+		<span class="badge" data-badge-caption="products">{{ object.category.count }}</span></a>
+	{% endfor %}
+	</div>
+	<a class="btn btn-primary" href="{% url 'product_manager_category_create' %}">Stwórz Nową Kategorię</a>
+{% endblock %}

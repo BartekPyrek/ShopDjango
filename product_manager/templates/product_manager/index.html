@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+	<h2>Najnowsze produkty</h2>
+	<table class="table">
+		<tr>
+			<td>Nazwa</td>
+		    <td>Opis</td>
+		    <td>Cena (PLN)</td>
+		</tr>
+		{% for object in object_list %}
+			<tr>
+			    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+			    <td>{{ object.description }}</td>
+			    <td>{{ object.price }} PLN</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<br>
+	<a class="btn btn-primary" href="{% url 'product_manager_product_list' %}">Pozostałe produkty</a>
+{% endblock %}

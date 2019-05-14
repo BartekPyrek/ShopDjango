@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<nav class="light-green lighten-1" role="navigation">
+			<div class="nav-wrapper container"><a id="logo-container" href="/product/" class="brand-logo">Sklep</a>
+				<ul class="right hide-on-med-and-down">
+					<li>
+						<a href="/product/">Strona Główna</a>
+					</li>
+					<li>
+						<a href="/product/list/">Produkty</a>
+					</li>
+					<li>
+						<a href="/category/">Kategorie</a>
+					</li>
+				</ul>
+		    </div>
+	    </nav>
+	    <div class="container">
+	    	<div class="section">
+	    		{% block content %} Wystąpił błąd. Proszę skontaktuj się z nami. {% endblock %}
+	    	</div>
+    	</div>
+	</body>
+</html>
