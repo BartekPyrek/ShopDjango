@@ -10,4 +10,4 @@ To setup and run Django project:
 - `python manage.py runserver`
 
 Access to project page:
-http://localhost:8080/product/
+http://localhost:8000/product/
